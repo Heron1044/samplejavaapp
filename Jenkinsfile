@@ -21,7 +21,7 @@ pipeline {
                }
            }			
         }
-    
+    //Love it or leave it CI/CD
         stage('package') {
 	   steps {
                 echo 'package..'
