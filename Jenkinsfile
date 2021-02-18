@@ -4,7 +4,7 @@ stages {
 stage('compile') {
 steps {
         echo 'compiling..'
-	git url: 'https://github.com/Heron1044/labs/tree/master/jenkins'
+	git url: 'https://github.com/Heron1044/samplejavaapp'
 	sh script: '/opt/apache-maven-3.6.3/bin/mvn compile'
        }
        }
