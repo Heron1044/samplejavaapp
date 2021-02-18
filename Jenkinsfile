@@ -1,15 +1,14 @@
 pipeline {
-    agent any
-    stages {
-        stage('compile') {
-	   steps {
-                echo 'compiling..'
-		git url: 'https://github.com/Heron1044/labs/tree/master/jenkins'
-		sh script: '/opt/apache-maven-3.6.3/bin/mvn compile'
-           }
-        }
-       
-        }
+agent any
+stages {
+stage('compile') {
+steps {
+        echo 'compiling..'
+	git url: 'https://github.com/Heron1044/labs/tree/master/jenkins'\
+	sh script: '/opt/apache-maven-3.6.3/bin/mvn compile'
+       }
+       }
+       }
         stage('unit-test') {
 	   steps {
                 echo 'unittest..'
@@ -28,4 +27,3 @@ pipeline {
            }		
         }
     }
-}
